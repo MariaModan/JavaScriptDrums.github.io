@@ -67,13 +67,12 @@
         key.classList.add("playing");
       });
 
-      function removeTransition(ev){
-        if(ev.propertyName !== "transform") return;
-        this.classList.remove("playing");
-      }
 
       const keys = document.querySelectorAll(".keys");
-      keys.forEach(key => key.addEventListener("transitionend", removeTransition()));
+      keys.forEach(key => key.addEventListener("transitionend", removeTransition(ev){
+        if(ev.propertyName !== "transform") return;
+        this.classList.remove("playing");
+      }));
     </script>
   </body>
 </html>

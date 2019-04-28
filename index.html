@@ -69,7 +69,7 @@
 
 
       const keys = document.querySelectorAll(".keys");
-      keys.forEach(key => key.addEventListener("transitionend", removeTransition(ev){
+      keys.forEach(key => key.addEventListener("transitionend", removeTransition(key){
         if(ev.propertyName !== "transform") return;
         this.classList.remove("playing");
       }));
